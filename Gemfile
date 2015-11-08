@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'https://ruby.taobao.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -42,7 +42,7 @@ group :development, :test do
   gem 'spring'
 
   # Use mysql as the database for Active Record
-  gem 'mysql2'
+  gem 'mysql2', '~> 0.3.20'
 end
 
 group :production do
