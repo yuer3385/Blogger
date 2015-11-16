@@ -31,7 +31,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "email validation should accept valid addresses" do
-    valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org first.last@foo.jp alice+bob@baz.cn]
+    valid_addresses = %w[user@example.com USER@foo..COM A_US-ER@foo.bar.org first.last@foo.jp alice+bob@baz.cn]
     valid_addresses.each do |va|
       @user.email = va
       assert @user.valid?, "#{va.inspect} should be valid"
@@ -56,7 +56,7 @@ class UserTest < ActiveSupport::TestCase
   test "email addresses shoulde be convert to downcase" do
     @user.email = 'RENWEI_hOmE@126.com'
     @user.save
-    assert @user.email == 'renwei_home@126.com'
+    assert_equal @user.email, 'RENWEI_hOmE@126.com'.downcase
   end
 
   test "password should have a minimum length" do
