@@ -7,6 +7,12 @@ gem 'rails', '4.2.0'
 #use bcrypt to encrypt
 gem 'bcrypt', '3.1.7'
 
+#build fake record
+gem 'faker', '1.4.2'
+
+#paginate
+gem 'will_paginate', '3.0.7'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -15,6 +21,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # Use bootstrap-sass
 gem 'bootstrap-sass', '3.2.0.0'
+gem 'bootstrap-will_paginate', '0.0.10'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
