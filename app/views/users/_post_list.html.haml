@@ -1,0 +1,6 @@
+%li{id: "micropost-#{micropost.id}"}
+  = gravatar_for @user
+  %span.user= link_to micropost.user.name, micropost.user
+  %span.content= micropost.content
+  %span.timestamp
+    Posted in #{time_ago_in_words(micropost.created_at, {})}
